@@ -24,7 +24,9 @@ public class HatController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector2 moveInput = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+        Vector2 moveInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+
+        Debug.Log("Horizontal input" + Input.GetAxisRaw("Horizontal"));
 
         if (active)
         {
@@ -37,10 +39,8 @@ public class HatController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        //rb.MovePosition(rb.position + moveVelocity * Time.fixedDeltaTime);
-        rb.AddForce(moveVelocity * Time.fixedDeltaTime, ForceMode2D.Impulse);
+        rb.MovePosition(rb.position + moveVelocity * Time.fixedDeltaTime);
         if (moveVelocity != Vector2.zero) isMoving = true;
         else isMoving = false;
-
     }
 }
