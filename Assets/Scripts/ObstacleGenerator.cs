@@ -2,30 +2,55 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ObstacleGenerator
+public class ObstacleGenerator : MonoBehaviour
 {
-    Vector3 zone1;
-    Vector3 zone2;
-    Vector3 zone3;
+    private List<Vector3> spawnPoints = new List<Vector3>();
+    public GameObject checker;
+    private GameObject spawnChecker;
 
-    public List<GameObject> three;
-    public List<GameObject> two;
-    public List<GameObject> one;
-    public List<GameObject> zero;
+    public double spawnDistance;
+
+    public List<ObstacleSet> sets;
+
+
+    void Start()
+    {
+        foreach (Transform child in transform) spawnPoints.Add(child.position);
+        GenerateChunk(3);
+    }
 
     void GenerateChunk(int currentZone)
     {
         List<Vector3> toSpawn = new List<Vector3>();
-        toSpawn.Add(zone1);
-        toSpawn.Add(zone2);
-        toSpawn.Add(zone3);
+        foreach (Vector3 t in spawnPoints) toSpawn.Add(t);
 
 
 
-        Vector3 current = toSpawn[currentZone - 1];
+        Vector3 current = toSpawn[currentZone];
         toSpawn.Remove(current);
 
-        GameObject.Instantiate(three[Random.Range(0, three.Count)], current, Quaternion.identity);
+        GameObject.Instantiate(sets[3].GetRandom(), current, Quaternion.identity);
+
+        foreach(Vector3 next in toSpawn)
+        {
+            GameObject.Instantiate(sets[Random.Range(0, sets.Count - 1)].GetRandom(), next, Quaternion.identity);
+        }
+
+        spawnChecker = GameObject.Instantiate(checker, gameObject.transform.position, Quaternion.identity);
+
     }
 
+
+    void Update()
+    {
+        if(GetDistance(spawnChecker.transform.position, Vector3.zero) < spawnDistance)
+        {
+            GenerateChunk(3);
+        }
+    }
+
+    public double GetDistance(Vector3 a, Vector3 b)
+    {
+        return Mathf.Sqrt(Mathf.Pow(a.x - b.x, 2) + Mathf.Pow(a.y - b.y, 2));
+    }
 }

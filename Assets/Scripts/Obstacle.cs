@@ -4,19 +4,38 @@ using UnityEngine;
 
 public class Obstacle : MonoBehaviour
 {
-    List<Sprite> sprites;
-    private SpriteRenderer renderer;
+    public List<Sprite> sprites;
+    private SpriteRenderer sprite;
     Vector2 velocity;
 
+    Rigidbody2D rb;
 
     private void Awake()
     {
-        renderer = gameObject.GetComponent<SpriteRenderer>();
-        renderer.sprite = sprites[Random.Range(0, sprites.Count)];
+        rb = gameObject.GetComponent<Rigidbody2D>();
+        if (sprites.Count != 0)
+        {
+            sprite = gameObject.GetComponent<SpriteRenderer>();
+            sprite.sprite = sprites[Random.Range(0, sprites.Count)];
+        }
+        AddToController();
+
+    }
+
+    protected void AddToController()
+    {
+        GameController controller = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
+        if (this is StationaryObstacle) controller.staticObstacles.Add(this);
+        this.SetVelocity(controller.GetVelocity());
     }
 
     public void SetVelocity(Vector2 _velocity)
     {
         velocity = _velocity;
+    }
+
+    private void Update()
+    {
+        rb.MovePosition(rb.position + velocity * Time.fixedDeltaTime);
     }
 }
