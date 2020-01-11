@@ -1,0 +1,325 @@
+fileFormatVersion: 2
+guid: 84c00c7740c642742906a80f91ac23b4
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 431512648808933374
+    second: dude_0
+  - first:
+      213: 3401027313411992042
+    second: dude_1
+  - first:
+      213: -6706878247904712187
+    second: dude_2
+  - first:
+      213: 5274171636649627437
+    second: dude_3
+  - first:
+      213: 7901056094249196269
+    second: dude_4
+  - first:
+      213: -5808287440469403370
+    second: dude_5
+  - first:
+      213: -2545976115179736736
+    second: dude_6
+  - first:
+      213: -4777436703062259514
+    second: dude_7
+  - first:
+      213: -2797036206050305746
+    second: dude_8
+  - first:
+      213: 8146276068681323074
+    second: dude_9
+  - first:
+      213: 9207391589264091527
+    second: dude_10
+  - first:
+      213: 4228368049281283107
+    second: dude_11
+  - first:
+      213: -1429206599967820139
+    second: dude_12
+  - first:
+      213: -6393999357953945268
+    second: dude_13
+  - first:
+      213: 2247182329694902282
+    second: dude_16
+  - first:
+      213: -2428033155117679061
+    second: dude_17
+  - first:
+      213: 966772190878267732
+    second: dude_18
+  - first:
+      213: -963189757250154217
+    second: dude_19
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: dude_0
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 2884
+        width: 902
+        height: 1017
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c42b07aa76ddee84b83ac2f33847ec21
+      internalID: 431512648808933374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dude_1
+      rect:
+        serializedVersion: 2
+        x: 1091
+        y: 2814
+        width: 674
+        height: 1103
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9759c2cd0cb6074194b87b1787dbe7f
+      internalID: 3401027313411992042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dude_2
+      rect:
+        serializedVersion: 2
+        x: 1907
+        y: 2909
+        width: 830
+        height: 988
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa402695bc43e034dbd9a86ccc7010d3
+      internalID: -6706878247904712187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dude_4
+      rect:
+        serializedVersion: 2
+        x: 3031
+        y: 2802
+        width: 816
+        height: 1074
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8434f4b704627d64db876d081a6efbe8
+      internalID: 7901056094249196269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dude_6
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 1698
+        width: 816
+        height: 1014
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 539ab9a3273a8404ea1e4b378b50d201
+      internalID: -2545976115179736736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dude_8
+      rect:
+        serializedVersion: 2
+        x: 1860
+        y: 1686
+        width: 865
+        height: 967
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 26, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35b3977d332512c4abfd9db46225a6d7
+      internalID: -2797036206050305746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dude_9
+      rect:
+        serializedVersion: 2
+        x: 2919
+        y: 1733
+        width: 928
+        height: 979
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62a3e548d3e55cd428ba863740be74d9
+      internalID: 8146276068681323074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dude_10
+      rect:
+        serializedVersion: 2
+        x: 986
+        y: 1691
+        width: 842
+        height: 982
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f30d4932398d976498ff7fab61260e77
+      internalID: 9207391589264091527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
