@@ -23,12 +23,6 @@ TextureImporter:
   - first:
       213: -2683581536351381293
     second: Hat_6
-  - first:
-      213: 7613330016314061283
-    second: Hat_7
-  - first:
-      213: -4791226207513538912
-    second: Hat_8
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -116,18 +110,18 @@ TextureImporter:
       name: Hat_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 3355
-        width: 1000
-        height: 645
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 123
+        y: 3311
+        width: 877
+        height: 689
+      alignment: 9
+      pivot: {x: 0.49133703, y: 0.5110264}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 66d75d60a9c7bf54c99cd3d2365f4374
+      spriteID: 97db93da1fd87f7429b83af7c735f917
       internalID: -1836120431684336037
       vertices: []
       indices: 
@@ -137,18 +131,18 @@ TextureImporter:
       name: Hat_1
       rect:
         serializedVersion: 2
-        x: 1037
-        y: 3320
-        width: 940
-        height: 651
+        x: 982
+        y: 3295
+        width: 950
+        height: 705
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 12, y: 0, z: 31, w: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d61eceb73870cc041adcc438bd7f8017
+      spriteID: 901c1a473d5d5b145866c418ed298b46
       internalID: -4038234421547509746
       vertices: []
       indices: 
@@ -158,18 +152,18 @@ TextureImporter:
       name: Hat_2
       rect:
         serializedVersion: 2
-        x: 1964
-        y: 3325
-        width: 1036
-        height: 675
+        x: 1939
+        y: 3242
+        width: 1038
+        height: 720
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 08134c2aa2a300242b191b1807b7645a
+      spriteID: 130732632a692aa4487bf259cdea0e62
       internalID: -4634720409283538282
       vertices: []
       indices: 
@@ -179,18 +173,18 @@ TextureImporter:
       name: Hat_3
       rect:
         serializedVersion: 2
-        x: 2991
-        y: 3214
-        width: 986
-        height: 686
+        x: 3000
+        y: 3250
+        width: 1000
+        height: 750
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4c049ebc8786da947a96414e33f26f43
+      spriteID: 112660b81b10cf34881a93109609885b
       internalID: -1525018531985057102
       vertices: []
       indices: 
@@ -200,18 +194,18 @@ TextureImporter:
       name: Hat_4
       rect:
         serializedVersion: 2
-        x: 147
-        y: 2662
-        width: 879
-        height: 670
+        x: 91
+        y: 2688
+        width: 982
+        height: 661
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ae73aedb61dde0047b9feacd67834652
+      spriteID: 8451888a92ee026409dc6f10bb0fc0eb
       internalID: -6191123158643633914
       vertices: []
       indices: 
@@ -221,18 +215,18 @@ TextureImporter:
       name: Hat_5
       rect:
         serializedVersion: 2
-        x: 1018
-        y: 2698
-        width: 1000
-        height: 645
+        x: 1030
+        y: 2680
+        width: 954
+        height: 623
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 59c404966015bb140b1c8d6189fb1c70
+      spriteID: bcc0e9c92a804d74391e1f4176c697fa
       internalID: -35276699701321369
       vertices: []
       indices: 
@@ -242,61 +236,19 @@ TextureImporter:
       name: Hat_6
       rect:
         serializedVersion: 2
-        x: 2000
-        y: 2710
-        width: 1000
-        height: 645
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7d3c6692f825a344ba1ce86539156af7
-      internalID: -2683581536351381293
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Hat_7
-      rect:
-        serializedVersion: 2
-        x: 3000
-        y: 2710
-        width: 1000
-        height: 645
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3bfd564d4c5bbc1459efff6e84b46cba
-      internalID: 7613330016314061283
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Hat_8
-      rect:
-        serializedVersion: 2
         x: 0
-        y: 2065
+        y: 1000
         width: 1000
-        height: 645
+        height: 750
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 292bae574795faf408d1d0a93a832f2c
-      internalID: -4791226207513538912
+      spriteID: 43afc847179f3bd4c92cc13a18e8a5ba
+      internalID: -2683581536351381293
       vertices: []
       indices: 
       edges: []
