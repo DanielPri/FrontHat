@@ -43,6 +43,7 @@ public class WindController : MonoBehaviour
             timeElapsed = 0f;
             initialAngle = transform.eulerAngles.z;
             targetAngle = initialAngle + (UnityEngine.Random.Range(0, 2) * 2 - 1) * 90f;
+            gameController.SpawnAll();
         }
         if (!canRotate)
         {

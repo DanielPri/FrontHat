@@ -26,7 +26,7 @@ public class Obstacle : MonoBehaviour
     protected void AddToController()
     {
         GameController controller = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
-        if (this is StationaryObstacle) controller.staticObstacles.Add(this);
+        controller.staticObstacles.Add(this);
         this.SetVelocity(controller.GetVelocity());
     }
 
@@ -38,6 +38,10 @@ public class Obstacle : MonoBehaviour
     private void Update()
     {
         rb.MovePosition(rb.position + velocity * Time.fixedDeltaTime);
-        if (ObstacleGenerator.GetDistance(this.transform.position, Vector3.zero) > zoneOut) Destroy(transform.parent.gameObject);
+        if (ObstacleGenerator.GetDistance(this.transform.position, Vector3.zero) > zoneOut)
+        {
+            if (transform.parent != null) Destroy(transform.parent.gameObject);
+            else Destroy(gameObject);
+        }
     }
 }

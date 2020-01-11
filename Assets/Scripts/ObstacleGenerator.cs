@@ -19,7 +19,7 @@ public class ObstacleGenerator : MonoBehaviour
         GenerateChunk(3);
     }
 
-    void GenerateChunk(int currentZone)
+    public void GenerateChunk(int currentZone)
     {
         List<Vector3> toSpawn = new List<Vector3>();
         foreach (Vector3 t in spawnPoints) toSpawn.Add(t);
@@ -36,10 +36,15 @@ public class ObstacleGenerator : MonoBehaviour
             GameObject.Instantiate(sets[Random.Range(0, sets.Count - 1)].GetRandom(), next, Quaternion.identity);
         }
 
-        spawnChecker = GameObject.Instantiate(checker, gameObject.transform.position, Quaternion.identity);
+        CreateChecker();
 
     }
 
+    public void CreateChecker()
+    {
+        spawnChecker = GameObject.Instantiate(checker, gameObject.transform.position, Quaternion.identity);
+        
+    }
 
     void Update()
     {
