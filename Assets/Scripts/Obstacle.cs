@@ -6,6 +6,7 @@ public class Obstacle : MonoBehaviour
 {
     public List<Sprite> sprites;
     private SpriteRenderer sprite;
+    private double zoneOut = 30;
     Vector2 velocity;
 
     Rigidbody2D rb;
@@ -37,5 +38,6 @@ public class Obstacle : MonoBehaviour
     private void Update()
     {
         rb.MovePosition(rb.position + velocity * Time.fixedDeltaTime);
+        if (ObstacleGenerator.GetDistance(this.transform.position, Vector3.zero) > zoneOut) Destroy(transform.parent.gameObject);
     }
 }
