@@ -7,10 +7,13 @@ public class HatController : MonoBehaviour
 
     bool active = true;
     bool isMoving;
-    Vector2 moveVelocity;
+
+    Vector2 moveVelocity = Vector2.zero;
     public float speed;
 
     Rigidbody2D rb;
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -23,12 +26,21 @@ public class HatController : MonoBehaviour
     {
         Vector2 moveInput = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
 
-        if (active)         {             moveVelocity = moveInput.normalized * speed;         }         else moveVelocity = Vector2.zero; 
+        if (active)
+        {
+            moveVelocity = moveInput.normalized * speed;
+        }
+        else moveVelocity = Vector2.zero;
+
 
     }
 
     private void FixedUpdate()
     {
-        rb.MovePosition(rb.position + moveVelocity * Time.fixedDeltaTime);         if (moveVelocity != Vector2.zero) isMoving = true;         else isMoving = false; 
+        //rb.MovePosition(rb.position + moveVelocity * Time.fixedDeltaTime);
+        rb.AddForce(moveVelocity * Time.fixedDeltaTime, ForceMode2D.Impulse);
+        if (moveVelocity != Vector2.zero) isMoving = true;
+        else isMoving = false;
+
     }
 }
