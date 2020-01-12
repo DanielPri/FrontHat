@@ -78,7 +78,7 @@ GameObject:
   - component: {fileID: 3788164657850586782}
   - component: {fileID: 5673026990158540887}
   - component: {fileID: 3642459816361868954}
-  - component: {fileID: 6570393635340894509}
+  - component: {fileID: 4551133875895159140}
   m_Layer: 0
   m_Name: lamp
   m_TagString: obstacle
@@ -169,8 +169,8 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!61 &6570393635340894509
-BoxCollider2D:
+--- !u!60 &4551133875895159140
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -182,7 +182,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.06934777, y: -2.4965234}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -192,6 +192,9 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.2166669, y: 2.3369532}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.45002675, y: -3.3565876}
+      - {x: 0.7, y: -3.465}
+      - {x: 0.30017236, y: -1.8664478}
+      - {x: -0.23569174, y: -1.8808033}
