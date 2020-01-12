@@ -226,15 +226,20 @@ PrefabInstance:
       propertyPath: windDirection
       value: 
       objectReference: {fileID: 1747823702}
+    - target: {fileID: 8152771018842466754, guid: 5846502095ffd43459dad804e932cd2c,
+        type: 3}
+      propertyPath: borderLimit
+      value: 0.6
+      objectReference: {fileID: 0}
     - target: {fileID: 8152771018842466764, guid: 5846502095ffd43459dad804e932cd2c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.07
       objectReference: {fileID: 0}
     - target: {fileID: 8152771018842466764, guid: 5846502095ffd43459dad804e932cd2c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8152771018842466764, guid: 5846502095ffd43459dad804e932cd2c,
         type: 3}
