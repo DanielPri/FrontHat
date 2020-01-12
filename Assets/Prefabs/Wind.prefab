@@ -131,3 +131,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotateSpeed: 1.5
   rotateFrequency: 2
+  windDirection: {x: 0, y: 0}
+  stopWind: 0

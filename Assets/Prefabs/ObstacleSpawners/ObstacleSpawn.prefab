@@ -48,6 +48,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f881c92982f0d4b968ec91f652642caa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bgOffsetAmount: 0.02
   checker: {fileID: 653792956019866992, guid: bb761583771ca41b888b63b0069358a2, type: 3}
   spawnDistance: 11
   sets:
@@ -55,6 +56,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e322de38cfc6e4e1e86fac2d647f22ac, type: 2}
   - {fileID: 11400000, guid: 85ab63b9632604b2d9aaa5748dc10e79, type: 2}
   - {fileID: 11400000, guid: 13fbf39f1f31e4437ae1750c767687a7, type: 2}
+  bgElements: []
 --- !u!1 &4705019331145606948
 GameObject:
   m_ObjectHideFlags: 0

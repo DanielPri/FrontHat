@@ -5,13 +5,14 @@ using UnityEngine;
 public class ObstacleGenerator : MonoBehaviour
 {
     private List<Vector3> spawnPoints = new List<Vector3>();
+    [SerializeField] float bgOffsetAmount = 0.02f;
     public GameObject checker;
     private GameObject spawnChecker;
 
     public double spawnDistance;
 
     public List<ObstacleSet> sets;
-
+    public List<BackGroundSet> bgElements;
 
     void Start()
     {
@@ -24,20 +25,28 @@ public class ObstacleGenerator : MonoBehaviour
         List<Vector3> toSpawn = new List<Vector3>();
         foreach (Vector3 t in spawnPoints) toSpawn.Add(t);
 
-
-
         Vector3 current = toSpawn[currentZone];
         toSpawn.Remove(current);
 
-        GameObject.Instantiate(sets[3].GetRandom(), current, Quaternion.identity);
+        Instantiate(sets[3].GetRandom(), current + randomOffset(), Quaternion.identity);
 
-        foreach(Vector3 next in toSpawn)
+        Instantiate(bgElements[Random.Range(0, bgElements.Count)].GetRandom(), current + randomOffset(), Quaternion.identity);
+
+        foreach (Vector3 next in toSpawn)
         {
-            GameObject.Instantiate(sets[Random.Range(0, sets.Count - 1)].GetRandom(), next, Quaternion.identity);
+            Instantiate(sets[Random.Range(0, sets.Count - 1)].GetRandom(), next + randomOffset(), Quaternion.identity);
+            Instantiate(bgElements[Random.Range(0, bgElements.Count)].GetRandom(), next + randomOffset(), Quaternion.identity);
         }
 
         CreateChecker();
 
+    }
+
+    private Vector3 randomOffset()
+    {
+        float xOffset = Random.Range(-bgOffsetAmount, bgOffsetAmount);
+        float yOffset = Random.Range(-bgOffsetAmount*2, bgOffsetAmount*2);
+        return new Vector3(xOffset, yOffset);
     }
 
     public void CreateChecker()
@@ -50,9 +59,9 @@ public class ObstacleGenerator : MonoBehaviour
     {
         if(spawnChecker == null)
         {
-
+            Debug.Log("Uh oh!");
         }
-        else if(GetDistance(spawnChecker.transform.position, Vector3.zero) < spawnDistance)
+        else if(GetDistance(spawnChecker.transform.position, Vector3.zero) < spawnDistance + randomOffset().x)
         {
             GenerateChunk(3);
         }
