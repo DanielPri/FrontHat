@@ -10,7 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 474d813f8ac6447468a5816136e288f6, type: 3}
-  m_Name: Trees1
+  m_Name: Trees
   m_EditorClassIdentifier: 
   obstacles:
   - {fileID: 4528819285884385642, guid: 84e7ba34388dfae47a75b00d521146bd, type: 3}
+  - {fileID: 4528819285884385642, guid: b45bf9b31aaabde4b9c3ebbd5e823e9c, type: 3}

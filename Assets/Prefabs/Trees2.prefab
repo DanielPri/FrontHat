@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8656858217181251053}
   - component: {fileID: 8948080745563183096}
   m_Layer: 0
-  m_Name: Trees1
+  m_Name: Trees2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -79,7 +79,7 @@ GameObject:
   - component: {fileID: 5673026990158540887}
   - component: {fileID: 3396640568466541907}
   m_Layer: 0
-  m_Name: tree
+  m_Name: yellowTree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -137,7 +137,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 100
-  m_Sprite: {fileID: 6426431280537739204, guid: 45739f73215b5a845b95042833bf5099,
+  m_Sprite: {fileID: 6426431280537739204, guid: bccc935bef91443488a6554547833fa7,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -159,7 +159,7 @@ Animator:
   m_GameObject: {fileID: 7004313868410405212}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 6870a84d8f2f63f438187d8d1f50ece7, type: 2}
+  m_Controller: {fileID: 9100000, guid: 8555caa4ea57c67458ba99e55b6e89a6, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
