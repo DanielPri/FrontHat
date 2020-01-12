@@ -103,6 +103,11 @@ public class HatController : MonoBehaviour
         else isMoving = false;
     }
 
+    void LateUpdate()
+    {
+        spriteRenderer.sortingOrder = -(int)(transform.position.y * 100);
+    }
+
     public bool CheckBounds(Vector2 check)
     {
         if (Mathf.Abs(check.x) >= 10.6f - borderLimit || Mathf.Abs(check.y) >= 6f - borderLimit) return false;
