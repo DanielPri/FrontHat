@@ -16,6 +16,9 @@ public class GameController : MonoBehaviour
     public ObstacleGenerator westSpawner;
     public ObstacleGenerator eastSpawner;
 
+    private GameObject chasePoint;
+    public float chaseDistance;
+
     public List<Obstacle> staticObstacles;
     public List<Obstacle> dynamicObstacles;
 
@@ -25,6 +28,10 @@ public class GameController : MonoBehaviour
         southSpawner = transform.Find("SOUTH").gameObject.GetComponent<ObstacleGenerator>();
         westSpawner = transform.Find("WEST").gameObject.GetComponent<ObstacleGenerator>();
         eastSpawner = transform.Find("EAST").gameObject.GetComponent<ObstacleGenerator>();
+        chasePoint = GameObject.FindGameObjectWithTag("ChasePoint");
+        player = GameObject.FindGameObjectWithTag("Player");
+        chasePoint.transform.localPosition = direction * chaseDistance;
+
     }
 
     public void SetDirection(float angle)
@@ -34,7 +41,7 @@ public class GameController : MonoBehaviour
         {
             ob.SetVelocity(GetVelocity());
         }
-        //Debug.Log(direction);
+        chasePoint.transform.localPosition = direction * chaseDistance;
 
     }
 
