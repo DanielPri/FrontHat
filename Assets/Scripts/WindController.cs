@@ -22,9 +22,12 @@ public class WindController : MonoBehaviour
     public Vector2 windDirection;
     public bool stopWind;
 
+    private GameController gameController;
+
     // Start is called before the first frame update
     void Start()
     {
+        gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
         canRotate = false;
     }
 
@@ -48,6 +51,7 @@ public class WindController : MonoBehaviour
             timeElapsed = 0f;
             initialAngle = transform.eulerAngles.z;
             targetAngle = initialAngle + (UnityEngine.Random.Range(0, 2) * 2 - 1) * 90f;
+            gameController.SpawnAll();
         }
         if (!canRotate)
         {
@@ -66,10 +70,13 @@ public class WindController : MonoBehaviour
 
             if (rotateProgress >= 1)
             {
-                transform.eulerAngles = new Vector3(0, 0, targetAngle);
+                newAngle = new Vector3(0, 0, targetAngle);
+                transform.eulerAngles = newAngle;
                 rotateProgress = 0f;
                 canRotate = false;
             }
+
+            gameController.SetDirection(newAngle.z);
         }
     }
     public void StopWind()
