@@ -15,3 +15,4 @@ MonoBehaviour:
   bgElements:
   - {fileID: 554773462171844845, guid: 81687683a57335d41a722055efad4c75, type: 3}
   - {fileID: 554773462171844845, guid: dccb015864aad43428443013d50e9b53, type: 3}
+  - {fileID: 554773462171844845, guid: ed876d59e4d34e142b78a005d662a346, type: 3}
