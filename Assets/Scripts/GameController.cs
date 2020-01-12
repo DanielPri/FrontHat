@@ -34,7 +34,7 @@ public class GameController : MonoBehaviour
         {
             ob.SetVelocity(GetVelocity());
         }
-        Debug.Log(direction);
+        //Debug.Log(direction);
 
     }
 
