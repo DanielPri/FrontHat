@@ -28,13 +28,13 @@ public class ObstacleGenerator : MonoBehaviour
         Vector3 current = toSpawn[currentZone];
         toSpawn.Remove(current);
 
-        Instantiate(sets[3].GetRandom(), current, Quaternion.identity);
+        Instantiate(sets[3].GetRandom(), current + randomOffset(), Quaternion.identity);
 
         Instantiate(bgElements[Random.Range(0, bgElements.Count)].GetRandom(), current + randomOffset(), Quaternion.identity);
 
         foreach (Vector3 next in toSpawn)
         {
-            Instantiate(sets[Random.Range(0, sets.Count - 1)].GetRandom(), next, Quaternion.identity);
+            Instantiate(sets[Random.Range(0, sets.Count - 1)].GetRandom(), next + randomOffset(), Quaternion.identity);
             Instantiate(bgElements[Random.Range(0, bgElements.Count)].GetRandom(), next + randomOffset(), Quaternion.identity);
         }
 
