@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameOverController : MonoBehaviour
 {
@@ -12,7 +13,6 @@ public class GameOverController : MonoBehaviour
     float timer;
     public int seconds;
 
-    // Start is called before the first frame update
     void Start()
     {
         gotCaught = gameObject.transform.GetChild(0);
@@ -21,7 +21,6 @@ public class GameOverController : MonoBehaviour
         wind = GameObject.Find("Wind").GetComponent<WindController>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         timer += Time.deltaTime;
@@ -38,6 +37,7 @@ public class GameOverController : MonoBehaviour
                 hatController.gotCaught = false;
                 wind.stopWind = false;
                 timer = 0;
+                SceneManager.LoadScene(2);
             }
         }
 
@@ -52,6 +52,7 @@ public class GameOverController : MonoBehaviour
                 hatController.crashed = false;
                 wind.stopWind = false;
                 timer = 0;
+                SceneManager.LoadScene(2);
             }
         }
     }
