@@ -5,6 +5,7 @@ using UnityEngine;
 public class GameOverController : MonoBehaviour
 {
     Transform gotCaught;
+    Transform crashed;
     HatController hatController;
     WindController wind;
 
@@ -15,6 +16,7 @@ public class GameOverController : MonoBehaviour
     void Start()
     {
         gotCaught = gameObject.transform.GetChild(0);
+        crashed = gameObject.transform.GetChild(1);
         hatController = GameObject.Find("Hat").GetComponent<HatController>();
         wind = GameObject.Find("Wind").GetComponent<WindController>();
     }
@@ -34,6 +36,20 @@ public class GameOverController : MonoBehaviour
                 Time.timeScale = 1;
                 gotCaught.gameObject.SetActive(false);
                 hatController.gotCaught = false;
+                wind.stopWind = false;
+                timer = 0;
+            }
+        }
+
+        if (hatController.crashed)
+        {
+            crashed.gameObject.SetActive(true);
+
+            if (Input.anyKeyDown)
+            {
+                Time.timeScale = 1;
+                crashed.gameObject.SetActive(false);
+                hatController.crashed = false;
                 wind.stopWind = false;
                 timer = 0;
             }

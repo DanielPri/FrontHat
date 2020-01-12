@@ -21,6 +21,7 @@ public class HatController : MonoBehaviour
 
 
     public bool gotCaught = false;
+    public bool crashed = false;
 
     Vector2 facingDirection;
     Animator anim;
@@ -63,7 +64,7 @@ public class HatController : MonoBehaviour
             moveVelocity = Vector2.zero;
         }
 
-        if (!gotCaught)
+        if (!gotCaught && !crashed)
         {
             moveInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
 
@@ -119,7 +120,7 @@ public class HatController : MonoBehaviour
         if(col.tag == "obstacle")
         {
             wind.StopWind();
-            gotCaught = true;
+            crashed = true;
         }
     }
 
