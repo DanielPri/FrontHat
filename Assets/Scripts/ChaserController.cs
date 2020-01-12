@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ChaserController : MonoBehaviour
 {
-    [SerializeField] GameObject target;
+    GameObject target;
     [SerializeField] float speed = 1f;
     [SerializeField] Transform windDirection;
 

@@ -54,6 +54,7 @@ MonoBehaviour:
   southSpawner: {fileID: 0}
   westSpawner: {fileID: 0}
   eastSpawner: {fileID: 0}
+  chaseDistance: 0
   staticObstacles: []
   dynamicObstacles: []
 --- !u!1001 &361441978653542541
