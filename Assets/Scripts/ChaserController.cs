@@ -16,6 +16,7 @@ public class ChaserController : MonoBehaviour
     {
         anim = GetComponentInChildren<Animator>();
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        target = GameObject.FindGameObjectWithTag("ChasePoint");
     }
 
     // Update is called once per frame
