@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class HatController : MonoBehaviour
 {
-
+    [SerializeField] Transform windDirection;
     public bool active = true;
     bool isMoving;
 
@@ -17,17 +17,23 @@ public class HatController : MonoBehaviour
 
     public bool gotCaught = false;
 
+    Vector2 facingDirection;
+    Animator anim;
+    SpriteRenderer spriteRenderer;
+
     // Start is called before the first frame update
     void Start()
     {
+        anim = GetComponentInChildren<Animator>();
         rb = gameObject.GetComponent<Rigidbody2D>();
         wind = GameObject.Find("Wind").GetComponent<WindController>();
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        setMovingDirection();
         if (active)
         {
             moveVelocity = moveInput.normalized * speed;
@@ -63,5 +69,28 @@ public class HatController : MonoBehaviour
         rb.MovePosition(rb.position + moveVelocity * Time.fixedDeltaTime);
         if (moveVelocity != Vector2.zero) isMoving = true;
         else isMoving = false;
+    }
+
+    public void setMovingDirection()
+    {
+        facingDirection = windDirection.rotation * Vector2.right;
+        if (facingDirection.x > 0.2)
+        {
+            anim.SetTrigger("HORIZONTAL");
+            spriteRenderer.flipX = false;
+        }
+        else if (facingDirection.x < -0.2)
+        {
+            anim.SetTrigger("HORIZONTAL");
+            spriteRenderer.flipX = true;
+        }
+        else if (facingDirection.y < -0.2)
+        {
+            anim.SetTrigger("DOWN");
+        }
+        else if (facingDirection.y > 0.2)
+        {
+            anim.SetTrigger("UP");
+        }
     }
 }

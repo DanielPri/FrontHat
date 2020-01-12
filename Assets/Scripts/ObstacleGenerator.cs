@@ -48,7 +48,11 @@ public class ObstacleGenerator : MonoBehaviour
 
     void Update()
     {
-        if(GetDistance(spawnChecker.transform.position, Vector3.zero) < spawnDistance)
+        if(spawnChecker == null)
+        {
+
+        }
+        else if(GetDistance(spawnChecker.transform.position, Vector3.zero) < spawnDistance)
         {
             GenerateChunk(3);
         }
