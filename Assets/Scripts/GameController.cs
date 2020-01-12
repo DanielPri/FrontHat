@@ -8,7 +8,9 @@ public class GameController : MonoBehaviour
     public float speed;
     public float speedMod;
     public Vector2 direction;
+    public Vector2 cameraMod;
 
+    public Vector3 anchor = Vector3.zero;
     GameObject player;
 
     public ObstacleGenerator northSpawner;
@@ -22,7 +24,7 @@ public class GameController : MonoBehaviour
     public List<Obstacle> staticObstacles;
     public List<Obstacle> dynamicObstacles;
 
-    private void Start()
+    private void Awake()
     {
         northSpawner = transform.Find("NORTH").gameObject.GetComponent<ObstacleGenerator>();
         southSpawner = transform.Find("SOUTH").gameObject.GetComponent<ObstacleGenerator>();
@@ -37,12 +39,16 @@ public class GameController : MonoBehaviour
     public void SetDirection(float angle)
     {
         direction = new Vector2(-Mathf.Cos(Mathf.Deg2Rad * angle), -Mathf.Sin(Mathf.Deg2Rad * angle)).normalized;
-        foreach(Obstacle ob in staticObstacles)
+
+    }
+
+    private void Update()
+    {
+        foreach (Obstacle ob in staticObstacles)
         {
             ob.SetVelocity(GetVelocity());
         }
         chasePoint.transform.localPosition = direction * chaseDistance;
-
     }
 
     public void SpawnAll()
@@ -55,11 +61,17 @@ public class GameController : MonoBehaviour
 
     public Vector2 GetVelocity()
     {
-        return direction * speed + direction * speedMod;
+        return (direction * speed) + cameraMod;
     }
 
-    public Vector2 GetVelocityMod()
+    public Vector2 SetVelocityMod(bool moving)
     {
-        return direction * speedMod;
+        Vector2 offset = new Vector2(anchor.x - player.transform.position.x, anchor.y - player.transform.position.y);
+
+        if (!moving) cameraMod = speedMod * offset * ObstacleGenerator.GetDistance(player.transform.position, anchor) * 0.1f;
+        else cameraMod = Vector2.zero;
+
+        return cameraMod;
+       
     }
 }

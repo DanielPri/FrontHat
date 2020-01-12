@@ -9,11 +9,16 @@ public class HatController : MonoBehaviour
     bool isMoving;
 
     Vector2 moveVelocity = Vector2.zero;
+    Vector2 correctionVelocity = Vector2.zero;
     public float speed;
 
     Rigidbody2D rb;
+
+    GameController gameController;
+
     public Vector2 moveInput;
     WindController wind;
+
 
     public bool gotCaught = false;
 
@@ -26,8 +31,12 @@ public class HatController : MonoBehaviour
     {
         anim = GetComponentInChildren<Animator>();
         rb = gameObject.GetComponent<Rigidbody2D>();
+
+        gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
+
         wind = GameObject.Find("Wind").GetComponent<WindController>();
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+
     }
 
     // Update is called once per frame
@@ -36,8 +45,19 @@ public class HatController : MonoBehaviour
         setMovingDirection();
         if (active)
         {
-            moveVelocity = moveInput.normalized * speed;
+            if (moveInput != Vector2.zero)
+            {
+                moveVelocity = moveInput.normalized * speed;
+
+            }
+            else
+            {
+                moveVelocity = Vector2.zero;
+               
+            }
         }
+
+
         else
         {
             moveVelocity = Vector2.zero;
@@ -62,11 +82,13 @@ public class HatController : MonoBehaviour
                 wind.stopWind = false;
             }
         }
+        
+        correctionVelocity = gameController.SetVelocityMod(isMoving);
     }
 
     private void FixedUpdate()
     {
-        rb.MovePosition(rb.position + moveVelocity * Time.fixedDeltaTime);
+        rb.MovePosition(rb.position + (moveVelocity + correctionVelocity) * Time.fixedDeltaTime);
         if (moveVelocity != Vector2.zero) isMoving = true;
         else isMoving = false;
     }

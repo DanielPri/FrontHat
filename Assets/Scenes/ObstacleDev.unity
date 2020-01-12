@@ -229,12 +229,12 @@ PrefabInstance:
     - target: {fileID: 8152771018842466764, guid: 5846502095ffd43459dad804e932cd2c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.19
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8152771018842466764, guid: 5846502095ffd43459dad804e932cd2c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.13
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8152771018842466764, guid: 5846502095ffd43459dad804e932cd2c,
         type: 3}
@@ -527,6 +527,11 @@ PrefabInstance:
         type: 3}
       propertyPath: chaseDistance
       value: 2.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2331024968289486693, guid: 6d574859447fe47a2ba283902abaa382,
+        type: 3}
+      propertyPath: speedMod
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4922310936704065685, guid: 6d574859447fe47a2ba283902abaa382,
         type: 3}
