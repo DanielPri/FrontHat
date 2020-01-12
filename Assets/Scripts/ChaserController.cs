@@ -11,19 +11,33 @@ public class ChaserController : MonoBehaviour
     Vector2 facingDirection;
     Animator anim;
     SpriteRenderer spriteRenderer;
-    
+    Rigidbody2D rb;
+    Vector2 correctionVelocity;
+
     void Start()
     {
+        correctionVelocity = Vector2.zero;
         anim = GetComponentInChildren<Animator>();
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         target = GameObject.FindGameObjectWithTag("ChasePoint");
+        rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.position = Vector2.MoveTowards(transform.position, target.transform.position, speed * Time.deltaTime);
+        //transform.position = Vector2.MoveTowards(transform.position, target.transform.position, speed * Time.fixedDeltaTime);
         setMovingDirection();
+    }
+
+    private void FixedUpdate()
+    {
+        rb.MovePosition(Vector2.MoveTowards(rb.position, target.transform.position, speed * Time.fixedDeltaTime) + (correctionVelocity) * Time.fixedDeltaTime);
+    }
+
+    public void setCorrectionVelocity(Vector2 input)
+    {
+        correctionVelocity = input;
     }
 
     public void setMovingDirection()

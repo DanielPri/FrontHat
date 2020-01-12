@@ -22,6 +22,7 @@ public class DynamicObstacle : MonoBehaviour
         }
         obstacle = Instantiate(obstacle, nodes[pathIndex].position, Quaternion.identity);
         pathIndex++;
+        Destroy(gameObject, 20);
     }
 
     // Update is called once per frame

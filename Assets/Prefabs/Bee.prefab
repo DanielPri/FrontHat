@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2609623389894290163}
   - component: {fileID: 2933581678638052568}
   m_Layer: 0
-  m_Name: burdSprite
+  m_Name: beesprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 3797393948250677360}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children: []
   m_Father: {fileID: 8243847923221549493}
   m_RootOrder: 0
@@ -70,7 +70,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 101
-  m_Sprite: {fileID: 4677955323240055937, guid: b947cefa3c95f254db78a44d2173fe94,
+  m_Sprite: {fileID: 6810644856781708236, guid: fb16ad4492f909844bf0cf6d795eaf7e,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -92,7 +92,7 @@ Animator:
   m_GameObject: {fileID: 3797393948250677360}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e5f94bccb0936274dadb0f74e4f7873f, type: 2}
+  m_Controller: {fileID: 9100000, guid: ae46da9320d968240903101a325e29bf, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -110,9 +110,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8243847923221549493}
-  - component: {fileID: 4836469241903273040}
+  - component: {fileID: 9053559323658044030}
   m_Layer: 0
-  m_Name: Bird
+  m_Name: Bee
   m_TagString: obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -133,7 +133,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!70 &4836469241903273040
+--- !u!70 &9053559323658044030
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -146,6 +146,6 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.14351244, y: -0.010244607}
-  m_Size: {x: 1.0820092, y: 0.30335507}
+  m_Offset: {x: -0.10711438, y: -0.17673738}
+  m_Size: {x: 0.87014884, y: 0.32840303}
   m_Direction: 1

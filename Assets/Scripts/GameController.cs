@@ -10,8 +10,13 @@ public class GameController : MonoBehaviour
     public Vector2 direction;
     public Vector2 cameraMod;
 
+    [SerializeField] float dynamicObstacleFrequency = 5f;
+    float timeSinceLastDynamicObstacle = 0;
+
     public Vector3 anchor = Vector3.zero;
     GameObject player;
+    ChaserController chaser;
+
 
     public ObstacleGenerator northSpawner;
     public ObstacleGenerator southSpawner;
@@ -22,7 +27,8 @@ public class GameController : MonoBehaviour
     public float chaseDistance;
 
     public List<Obstacle> staticObstacles;
-    public List<Obstacle> dynamicObstacles;
+    public List<GameObject> dynamicObstacles;
+
 
     private void Awake()
     {
@@ -32,6 +38,7 @@ public class GameController : MonoBehaviour
         eastSpawner = transform.Find("EAST").gameObject.GetComponent<ObstacleGenerator>();
         chasePoint = GameObject.FindGameObjectWithTag("ChasePoint");
         player = GameObject.FindGameObjectWithTag("Player");
+        chaser = GameObject.Find("Chaser").GetComponent<ChaserController>();
         chasePoint.transform.localPosition = direction * chaseDistance;
 
     }
@@ -48,7 +55,9 @@ public class GameController : MonoBehaviour
         {
             ob.SetVelocity(GetVelocity());
         }
+        
         chasePoint.transform.localPosition = direction * chaseDistance;
+        spawnDynamicObstacle();
     }
 
     public void SpawnAll()
@@ -71,7 +80,18 @@ public class GameController : MonoBehaviour
         if (!moving) cameraMod = speedMod * offset * ObstacleGenerator.GetDistance(player.transform.position, anchor) * 0.1f;
         else cameraMod = Vector2.zero;
 
+        chaser.setCorrectionVelocity(cameraMod);
         return cameraMod;
        
+    }
+
+    void spawnDynamicObstacle()
+    {
+        if(timeSinceLastDynamicObstacle >= dynamicObstacleFrequency)
+        {
+            timeSinceLastDynamicObstacle = 0f;
+            Instantiate(dynamicObstacles[Random.Range(0, dynamicObstacles.Count)], Vector3.zero, Quaternion.identity);
+        }
+        timeSinceLastDynamicObstacle += Time.deltaTime;
     }
 }
