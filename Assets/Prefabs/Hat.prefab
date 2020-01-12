@@ -142,6 +142,7 @@ GameObject:
   - component: {fileID: 8152771018842466764}
   - component: {fileID: 8152771018842466755}
   - component: {fileID: 8152771018842466754}
+  - component: {fileID: 1336003807683306353}
   m_Layer: 0
   m_Name: Hat
   m_TagString: Player
@@ -203,3 +204,19 @@ MonoBehaviour:
   speed: 5
   moveInput: {x: 0, y: 0}
   gotCaught: 0
+--- !u!70 &1336003807683306353
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8152771018842466753}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.15355223, y: -0.1686716}
+  m_Size: {x: 0.82738614, y: 0.5006599}
+  m_Direction: 1

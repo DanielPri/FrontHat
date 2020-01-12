@@ -1,16 +1,13 @@
 fileFormatVersion: 2
-guid: 45739f73215b5a845b95042833bf5099
+guid: c59ecb5e91f507b4f99e0787bc76e36c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5943844304925035917
-    second: Green_tree_0
+      213: -1417605160711131049
+    second: green_tree_plain_0
   - first:
-      213: 6426431280537739204
-    second: Green_tree_1
-  - first:
-      213: 1762729437259519161
-    second: Green_tree_2
+      213: -8915119176208760896
+    second: green_tree_plain_1
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -95,64 +92,43 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Green_tree_0
+      name: green_tree_plain_0
       rect:
         serializedVersion: 2
-        x: 104
-        y: 337
-        width: 585
-        height: 522
+        x: 421
+        y: 317
+        width: 465
+        height: 551
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 68bd0bbd13a615045a36398bdead9688
-      internalID: 5943844304925035917
+      spriteID: a3d344101c73b104284570baf14f4e51
+      internalID: -1417605160711131049
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Green_tree_1
+      name: green_tree_plain_1
       rect:
         serializedVersion: 2
-        x: 687
-        y: 334
-        width: 467
-        height: 533
+        x: 977
+        y: 317
+        width: 439
+        height: 552
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bd37ca4749d62a44b80d3ff70631741b
-      internalID: 6426431280537739204
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Green_tree_2
-      rect:
-        serializedVersion: 2
-        x: 1146
-        y: 339
-        width: 586
-        height: 525
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8fdf56cf21870cf4c9b90b7e3f615552
-      internalID: 1762729437259519161
+      spriteID: 31f42643abefa5f4296824b5e0e27b24
+      internalID: -8915119176208760896
       vertices: []
       indices: 
       edges: []

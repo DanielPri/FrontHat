@@ -93,4 +93,14 @@ public class HatController : MonoBehaviour
             anim.SetTrigger("UP");
         }
     }
-}
+
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if(col.tag == "obstacle")
+        {
+            wind.StopWind();
+            gotCaught = true;
+        }
+    }
+
+ }

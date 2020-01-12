@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: BGSet1
   m_EditorClassIdentifier: 
   bgElements:
-  - {fileID: 554773462171844845, guid: 81687683a57335d41a722055efad4c75, type: 3}
+  - {fileID: 554773462171844845, guid: 351b6e6e27aec6c4da6149e077305211, type: 3}
   - {fileID: 554773462171844845, guid: dccb015864aad43428443013d50e9b53, type: 3}
   - {fileID: 554773462171844845, guid: ed876d59e4d34e142b78a005d662a346, type: 3}
   - {fileID: 554773462171844845, guid: 3b84e6d41c4bb314888f75ce0b67bbbd, type: 3}
   - {fileID: 554773462171844845, guid: b95c9a36a1d174a449aec0510de01573, type: 3}
-  - {fileID: 554773462171844845, guid: 576b2f91767745047902e9f21c097785, type: 3}
+  - {fileID: 554773462171844845, guid: 1673f40cc8ecdfa46802baf3e053cb39, type: 3}

@@ -8,9 +8,6 @@ TextureImporter:
   - first:
       213: -7133718690516275112
     second: lamps_1
-  - first:
-      213: -5202589402833740621
-    second: lamps_2
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -98,10 +95,10 @@ TextureImporter:
       name: lamps_0
       rect:
         serializedVersion: 2
-        x: 149
-        y: 150
-        width: 507
-        height: 828
+        x: 802
+        y: 179
+        width: 227
+        height: 732
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -109,7 +106,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2c2f725d7f54161408b5327b02038b03
+      spriteID: c8b4afd22f538104fa60e12ac27171e0
       internalID: 7709045187503265501
       vertices: []
       indices: 
@@ -119,10 +116,10 @@ TextureImporter:
       name: lamps_1
       rect:
         serializedVersion: 2
-        x: 726
-        y: 150
-        width: 460
-        height: 834
+        x: 1113
+        y: 168
+        width: 228
+        height: 733
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -130,29 +127,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b10570144d0c3374a8120c61297ab5f1
+      spriteID: 8949eb9e8d9afd745a5d6a306bdd890b
       internalID: -7133718690516275112
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: lamps_2
-      rect:
-        serializedVersion: 2
-        x: 1206
-        y: 155
-        width: 450
-        height: 823
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4c0e88784dd6a4f43bbfabf04455d6e8
-      internalID: -5202589402833740621
       vertices: []
       indices: 
       edges: []
