@@ -12,6 +12,7 @@ public class GameController : MonoBehaviour
 
     public Vector3 anchor = Vector3.zero;
     GameObject player;
+    ChaserController chaser;
 
     public ObstacleGenerator northSpawner;
     public ObstacleGenerator southSpawner;
@@ -32,6 +33,7 @@ public class GameController : MonoBehaviour
         eastSpawner = transform.Find("EAST").gameObject.GetComponent<ObstacleGenerator>();
         chasePoint = GameObject.FindGameObjectWithTag("ChasePoint");
         player = GameObject.FindGameObjectWithTag("Player");
+        chaser = GameObject.Find("Chaser").GetComponent<ChaserController>();
         chasePoint.transform.localPosition = direction * chaseDistance;
 
     }
@@ -48,6 +50,7 @@ public class GameController : MonoBehaviour
         {
             ob.SetVelocity(GetVelocity());
         }
+        
         chasePoint.transform.localPosition = direction * chaseDistance;
     }
 
@@ -71,6 +74,7 @@ public class GameController : MonoBehaviour
         if (!moving) cameraMod = speedMod * offset * ObstacleGenerator.GetDistance(player.transform.position, anchor) * 0.1f;
         else cameraMod = Vector2.zero;
 
+        chaser.setCorrectionVelocity(cameraMod);
         return cameraMod;
        
     }
