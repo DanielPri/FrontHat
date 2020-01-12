@@ -54,7 +54,7 @@ public class ObstacleGenerator : MonoBehaviour
         }
     }
 
-    public static double GetDistance(Vector3 a, Vector3 b)
+    public static float GetDistance(Vector3 a, Vector3 b)
     {
         return Mathf.Sqrt(Mathf.Pow(a.x - b.x, 2) + Mathf.Pow(a.y - b.y, 2));
     }
