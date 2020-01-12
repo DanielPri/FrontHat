@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bgElements:
   - {fileID: 653792956019866992, guid: bb761583771ca41b888b63b0069358a2, type: 3}
-  - {fileID: 554773462171844845, guid: 81687683a57335d41a722055efad4c75, type: 3}
+  - {fileID: 554773462171844845, guid: da64b409dad828e48afe4a9d0d731f31, type: 3}

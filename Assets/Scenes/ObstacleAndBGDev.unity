@@ -325,6 +325,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3671325488473854233, guid: ca64be59826c51347b61c9b0f6a44706,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0.67058825
+      objectReference: {fileID: 0}
+    - target: {fileID: 3671325488473854235, guid: ca64be59826c51347b61c9b0f6a44706,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3671325488531238581, guid: ca64be59826c51347b61c9b0f6a44706,
         type: 3}
       propertyPath: m_Name
@@ -545,7 +555,7 @@ PrefabInstance:
     - target: {fileID: 2522811106207392151, guid: 90cb088e3bfd16140a23aa34b2528982,
         type: 3}
       propertyPath: speed
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4566296653203276034, guid: 90cb088e3bfd16140a23aa34b2528982,
         type: 3}
