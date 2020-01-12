@@ -35,6 +35,11 @@ public class ChaserController : MonoBehaviour
         rb.MovePosition(Vector2.MoveTowards(rb.position, target.transform.position, speed * Time.fixedDeltaTime) + (correctionVelocity) * Time.fixedDeltaTime);
     }
 
+    void LateUpdate()
+    {
+        spriteRenderer.sortingOrder = -(int)(transform.position.y * 100);
+    }
+
     public void setCorrectionVelocity(Vector2 input)
     {
         correctionVelocity = input;

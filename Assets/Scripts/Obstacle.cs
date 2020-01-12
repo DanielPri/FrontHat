@@ -44,4 +44,9 @@ public class Obstacle : MonoBehaviour
             else Destroy(gameObject);
         }
     }
+
+    public void SortLayer()
+    {
+        sprite.sortingOrder = -(int)(transform.position.y * 100);
+    }
 }

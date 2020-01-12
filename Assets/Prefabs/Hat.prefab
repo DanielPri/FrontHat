@@ -97,8 +97,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1472249985
+  m_SortingLayer: 1
   m_SortingOrder: 50
   m_Sprite: {fileID: -1836120431684336037, guid: 3e8d65e56805a914ba4f1eabeac2fc4b,
     type: 3}
@@ -202,8 +202,10 @@ MonoBehaviour:
   windDirection: {fileID: 0}
   active: 1
   speed: 5
+  borderLimit: 0
   moveInput: {x: 0, y: 0}
   gotCaught: 0
+  crashed: 0
 --- !u!70 &1336003807683306353
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

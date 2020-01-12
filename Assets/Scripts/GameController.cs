@@ -46,7 +46,10 @@ public class GameController : MonoBehaviour
     public void SetDirection(float angle)
     {
         direction = new Vector2(-Mathf.Cos(Mathf.Deg2Rad * angle), -Mathf.Sin(Mathf.Deg2Rad * angle)).normalized;
-
+        foreach (Obstacle ob in staticObstacles)
+        {
+            ob.SortLayer();
+        }
     }
 
     private void Update()
