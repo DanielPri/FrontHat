@@ -20,7 +20,7 @@ public class Obstacle : MonoBehaviour
             sprite.sprite = sprites[Random.Range(0, sprites.Count)];
         }
         AddToController();
-
+        //SortLayer();
     }
 
     protected void AddToController()
