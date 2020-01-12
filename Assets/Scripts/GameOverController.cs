@@ -8,6 +8,9 @@ public class GameOverController : MonoBehaviour
     HatController hatController;
     WindController wind;
 
+    float timer;
+    public int seconds;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +22,9 @@ public class GameOverController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        timer += Time.deltaTime;
+        seconds = (int)(timer % 60);
+
         if (hatController.gotCaught)
         {
             gotCaught.gameObject.SetActive(true);
@@ -29,6 +35,7 @@ public class GameOverController : MonoBehaviour
                 gotCaught.gameObject.SetActive(false);
                 hatController.gotCaught = false;
                 wind.stopWind = false;
+                timer = 0;
             }
         }
     }

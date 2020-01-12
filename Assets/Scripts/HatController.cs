@@ -67,8 +67,6 @@ public class HatController : MonoBehaviour
         {
             moveInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
 
-            Debug.Log(Input.GetAxisRaw("Horizontal"));
-
             if (moveInput.x != 0 || moveInput.y != 0)
             {
                 if (moveInput.x == -wind.windDirection.x && moveInput.y == 0 || moveInput.y == -wind.windDirection.y && moveInput.x == 0)
