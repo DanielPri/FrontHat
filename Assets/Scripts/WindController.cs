@@ -18,6 +18,9 @@ public class WindController : MonoBehaviour
     float targetAngle = 90f;
 
     float timeElapsed = 0f;
+    float windRotation;
+    public Vector2 windDirection;
+    public bool stopWind;
 
     // Start is called before the first frame update
     void Start()
@@ -28,8 +31,13 @@ public class WindController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rotateCondition();
-        rotateSelf(initialAngle, targetAngle);
+        if (!stopWind)
+        {
+            rotateCondition();
+            rotateSelf(initialAngle, targetAngle);
+            windRotation = transform.rotation.eulerAngles.z;
+            windDirection = new Vector2(Mathf.Cos(windRotation * Mathf.Deg2Rad), Mathf.Sin(windRotation * Mathf.Deg2Rad));
+        }
     }
 
     private void rotateCondition()
@@ -63,5 +71,10 @@ public class WindController : MonoBehaviour
                 canRotate = false;
             }
         }
+    }
+    public void StopWind()
+    {
+        Time.timeScale = 0;
+        stopWind = true;
     }
 }
