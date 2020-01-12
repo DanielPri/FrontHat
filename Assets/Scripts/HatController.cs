@@ -12,6 +12,8 @@ public class HatController : MonoBehaviour
     Vector2 correctionVelocity = Vector2.zero;
     public float speed;
 
+    public float borderLimit;
+
     Rigidbody2D rb;
 
     GameController gameController;
@@ -87,9 +89,24 @@ public class HatController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb.MovePosition(rb.position + (moveVelocity + correctionVelocity) * Time.fixedDeltaTime);
+        Vector2 movement = rb.position + (moveVelocity + correctionVelocity) * Time.fixedDeltaTime;
+        if (CheckBounds(movement))
+        {
+            rb.MovePosition(movement);
+        }
+        else
+        {
+            rb.MovePosition(rb.position + (correctionVelocity) * Time.fixedDeltaTime);
+        }
+
         if (moveVelocity != Vector2.zero) isMoving = true;
         else isMoving = false;
+    }
+
+    public bool CheckBounds(Vector2 check)
+    {
+        if (Mathf.Abs(check.x) >= 10.6f - borderLimit || Mathf.Abs(check.y) >= 6f - borderLimit) return false;
+        else return true;
     }
 
     public void setMovingDirection()
