@@ -61,7 +61,7 @@ public class ObstacleGenerator : MonoBehaviour
         {
             Debug.Log("Uh oh!");
         }
-        else if(GetDistance(spawnChecker.transform.position, Vector3.zero) < spawnDistance)
+        else if(GetDistance(spawnChecker.transform.position, Vector3.zero) < spawnDistance + randomOffset().x)
         {
             GenerateChunk(3);
         }
